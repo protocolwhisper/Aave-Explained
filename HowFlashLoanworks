@@ -1,0 +1,39 @@
+###Begin with npx hardhat###
+npm install @aave/core-v3
+npm install --save-dev @openzeppelin/hardhat-upgrades
+npm install --save-dev @nomiclabs/hardhat-ethers ethers # peer dependencies
+
+----
+Interfaces
+
+So if u inheritance an interface yes or yes u will need to 
+put all the functions otherwise it will be abstract.
+
+All functions declared inside an interface are implicitly virtual. They are virtual by default 
+event if they do not include the virtual keyword in ther definition inside the interface.
+
+import interface1 
+import interface2
+
+contract interface3 {
+	function setter returns(interface2)
+}
+
+
+How do Flash Loans Works?
+
+Write a smart contract that has a transaction that uses a flash loan.
+Let's assume the function is createFlashLoan.
+
+Your contracts calls a function on a Flash Loan provider , like Aave , indicating which
+asset you want and how much of it.
+
+The flash loan provider sends the assets to your contracts and calls back into your contract for a different function executeOperation.
+
+executeOPeration is all custom code you must have written, u do here whatever you think u have to do will the money and then you approve back the FlashLoan provider yo withdraw bacj the borrowed assets , along with a fee.
+
+The flash Loan provider takes back the assets it gave you , along with the premium.
+
+
+
+
