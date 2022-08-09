@@ -4,7 +4,7 @@ A Brief Explanation of Aave protocols with notes and Examples.
 ## How do Flash Loans Work?
 
   - Write a smart contract that has a transaction that uses a flash loan. Let's assume the function is createFlashLoan. 
-  - Your contracts contract calls for a function on a Flash Loan provider , like Aave , indicating which asset you want and how much of it.
+  - Your contract calls for a function on a Flash Loan provider , like Aave , indicating which asset you want and how much of it.
   - The flash loan provider sends the assets to your contracts and calls back into your contract for a different function executeOperation. 
   - ExecuteOPeration is all the custom code you must have written, you do here, whatever you think you have to do will the money and then you approve back    Aave to withdraw back the borrowed assets , along with a fee. The flash Loan provider takes back the assets it gave you, along with the premium(asset).
 
